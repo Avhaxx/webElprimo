@@ -1,0 +1,182 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<div class="min-h-screen bg-gray-100">
+ <!-- Barra de navegación -->
+ <div class="flex justify-center py-4">
+  <nav class="bg-gray-800 text-white p-4 shadow-md rounded-lg w-full max-w-6xl">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="assets/images/logo.png" alt="logo" class="h-13 w-20">
+        <h1 class="text-2xl font-black italic ml-4">Proyecto e Inversiones Del Primo</h1>
+      </div>
+      <ul class="flex space-x-4 items-center">
+        <li><a href="#productos" class="hover:text-yellow-500 text-xl font-black">Inicio</a></li>
+        <li class="border-2 border-gray-100 h-6"></li>
+        <li><a href="#instagram" class="hover:text-yellow-500 text-xl font-black mr-16">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<section class="container mx-auto mt-10 p-4 flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg">
+  <!-- Imagen de fondo con transparencia -->
+  <div class="w-full md:w-1/2 h-85 bg-cover bg-center rounded-lg overflow-hidden">
+    <img src="assets/images/primo4.1.JPG" alt="Imagen de fondo" class="w-full h-full object-cover">
+  </div>
+
+  <!-- Mensaje de bienvenida -->
+  <div class="w-full md:w-1/2 p-8">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-4">Bienvenidos a Proyecto e Inversion Del Primo</h2>
+    <p class="text-gray-600 mb-4 text-justify ">
+      Somos una empresa dedicada a la venta de productos 
+      coloniales para la decoración de interiores y exteriores. Nuestros 
+      productos son elaborados con materiales de alta calidad y con un 
+      diseño único que aportará un toque de elegancia y tradición a tus espacios.
+    </p>
+    <a href="#productos" class="bg-yellow-500 text-white text-2x2  py-2 px-4 rounded hover:bg-yellow-600 transition duration-5000 ease-in-out">Descubre más</a>
+  </div>
+</section>
+<!-- Nueva sección de productos -->
+<section id="productos" class="bg-gray-800 text-white py-12 mt-10">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-black text-center mb-8">Nuestros Productos</h2>
+    <div class="flex flex-wrap justify-center">
+      <!-- Producto 1 -->
+      <div class="bg-white text-gray-800 rounded-lg shadow-lg m-4 p-6 w-96">
+        <img src="assets/images/primo6.1.JPG" alt="Producto 1" class="w-full h-64 object-cover rounded transform transition duration-500 hover:scale-110">
+        <h3 class="text-xl font-semibold mt-4">Lajas formateadas y tablillas</h3>
+        <p class="text-gray-600 mt-2 text-justify">Reviste tus paredes tanto para exteriores como interiores con un estilo colonial.</p>
+      </div>
+      <!-- Producto 2 -->
+      <div class="bg-white text-gray-800 rounded-lg shadow-lg m-4 p-6 w-96">
+        <img src="assets/images/primo6.2.JPG" alt="Producto 2" class="w-full h-64 object-cover rounded transform transition duration-500 hover:scale-110">
+        <h3 class="text-xl font-semibold mt-4">Artículos decorativos coloniales</h3>
+        <p class="text-gray-600 mt-2 text-justify">Añade un toque de elegancia y tradición a tus espacios con nuestros artículos decorativos coloniales.</p>
+      </div>
+      <!-- Producto 3 -->
+      <div class="bg-white text-gray-800 rounded-lg shadow-lg m-4 p-6 w-96">
+        <img src="assets/images/primo6.JPG" alt="Producto 3" class="w-full h-64 object-cover rounded transform transition duration-500 hover:scale-110">
+        <h3 class="text-xl font-semibold mt-4">Rosetones</h3>
+        <p class="text-gray-600 mt-2 text-justify">Ideales para añadir una decoración extra a tus revestimientos de paredes y pisos.</p>
+      </div>
+        <!-- Añade más productos según sea necesario -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nueva sección de carrusel -->
+<section class="container mx-auto mt-8 mb-8  p-4 flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg">
+    <!-- Texto del carrusel -->
+    <div class="w-full md:w-1/2 p-8">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4 italic">¡Dale un toque colonial a tu hogar! </h2>
+      <p class="text-gray-600 mb-4">
+        Descubre nuestra amplia variedad de productos coloniales para la decoración y el 
+        revestimiento de tus espacios. Manten un estilo rústico y elegante en tu hogar con
+        nuestros productos.
+      </p>
+    </div>
+    <!-- Carrusel -->
+    <div class="w-full md:w-1/2 h-100   rounded-lg overflow-hidden relative">
+      <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+        <div *ngFor="let slide of slides" class="min-w-full">
+          <img [src]="slide.img" alt="Imagen" class="w-full h-80 object-contain rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- nueva seccion de instagram -->
+<section id="instagram" class="container mx-auto mt-8 mb-8 p-4 flex flex-col md:flex-row items-center bg-gray-800 rounded-lg shadow-lg">
+  <div class="w-full md:w-1/2 p-8">
+    <div class="flex items-center mb-4">
+      <a href="https://www.instagram.com/delprimosa/" target="_blank" class="hover:opacity-75 transition-opacity duration-300 transform hover:scale-110 hover:rotate-3 hover:shadow-lg">
+        <img src="assets/images/Instagram-Logo.png" alt="Instagram Logo" class="h-15 w-28 mr-4">
+      </a>
+      <h2 class="text-3xl font-semibold text-white italic">Síguenos en Instagram</h2>
+    </div>
+    <p class="text-white mb-4">
+      Descubre más sobre nuestros productos y proyectos en nuestra cuenta de Instagram. 
+      ¡Síguenos para estar al tanto de nuestras novedades!  <a href="https://www.instagram.com/delprimosa/" 
+      target="_blank" class="text-2xl font-semibold text-yellow-500 hover:underline :">&#64;delprimosa</a>
+    </p>
+  </div>
+  <div class="w-full md:w-1/2 p-8">
+    <!-- Código de inserción de LightWidget -->
+    <iframe src="//lightwidget.com/widgets/d253d7d6d21f5ed18427fff30b465d69.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;height:250px;border:0;overflow:hidden;"></iframe>
+  </div>
+</section>
+  
+
+
+
+
+
+
+  <!-- Seccion de google maps -->
+<section class=" ">
+    <div class="container mx-auto flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg">
+      <!-- Dirección en Google Maps -->
+      <div class="w-full md:w-1/2 p-8 bg-gray-800"> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.1164246568833!2d-68.26038049112367!3d10.171191089901175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e808de7d80273a5%3A0x6dc4e96de478f2c0!2sProyectos%20e%20inversiones%20del%20primo%20s.a!5e0!3m2!1ses!2sve!4v1740168657978!5m2!1ses!2sve" 
+        width="600" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen=""
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <!-- Mensaje de ubicación -->
+      <div class="w-full md:w-1/2 p-8">
+        <h2 class="text-3xl font-semibold text-black   mb-4 italic">¡Visítanos!</h2>
+        <p class="text-black mb-4 text-justify">
+          Estamos ubicados en Bejuma, Estado Carabobo, Venezuela. Ven y descubre nuestra amplia variedad de productos coloniales para la decoración y el revestimiento de tus paredes y pisos. ¡Te esperamos!
+        </p>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="bg-gray-800 text-white py-8">
+  <div class="container mx-auto flex flex-wrap justify-between">
+    <!-- Información de contacto -->
+    <div class="w-full md:w-1/3 ml-0 p-4">
+      <h3 class="text-xl font-semibold mb-4 border border-white rounded-full px-4 py-2 inline-block">Contacto</h3>
+      <p class="mb-2">Dirección: Avenida Fundadores, Bejuma 2040, Carabobo.</p>
+      <p class="mb-2">Whatsapp: 0424-4646358</p>
+      <p class="mb-2">Email: proyetoseinversionesdelprimosa&#64;hotmail.com</p>
+    </div>
+    <!-- Enlaces rápidos -->
+    <div class="w-full md:w-1/3 p-4">
+      <h3 class="text-xl font-semibold mb-4 border border-white rounded-full px-4 py-2 inline-block">Enlaces rápidos</h3>
+      <ul>
+        <li class="mb-2"><a href="#" class="hover:text-yellow-500">Inicio</a></li>
+        <li class="mb-2"><a href="#productos" class="hover:text-yellow-500">Productos</a></li>
+      </ul>
+    </div>
+    <!-- Redes sociales -->
+    <div class="w-full md:w-1/3 p-4">
+      <h3 class="text-xl font-semibold mb-4 border border-white rounded-full px-4 py-2 inline-block">Síguenos</h3>
+      <div class="flex space-x-4">
+        <a href="https://www.instagram.com/delprimosa/" target="_blank" class="hover:text-yellow-500">
+          <img src="assets/images/Instagram-Logo.png" alt="Instagram Logo" class="h-14 w-24">
+        </a>
+        <!-- Puedes añadir más iconos de redes sociales aquí -->
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto text-center mt-8">
+    
+    <p class="text-gray-500">&copy; 2025 Proyectos e Inversiones Del Primo C.A Todos los derechos reservados.</p>
+  </div>
+  <div class="flex items-center justify-center">
+    <img src="assets/images/primo1.1.png" alt="Logo" class="h-32 w-48 ">
+  </div>
+</footer>
+
+
+  
+</div>
