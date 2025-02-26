@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule],
+  imports: [CommonModule, ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
